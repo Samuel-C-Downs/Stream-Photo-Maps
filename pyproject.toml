@@ -1,0 +1,23 @@
+[project]
+name = "photo-map"
+version = "0.4.0"
+description = "Plot geotagged photos on an OpenStreetMap map and browse them by place and date."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pillow>=11",
+    "pillow-heif>=1.0",
+    "tzdata",  # timezone data for zoneinfo on Windows
+    "dash>=4.0",
+    "dash-leaflet>=1.1",
+]
+
+[project.optional-dependencies]
+notebook = ["pandas>=2", "folium>=0.17", "ipykernel"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]

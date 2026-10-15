@@ -1,0 +1,26 @@
+# App data: index database, thumbnails, logs (personal, contains GPS locations)
+data/
+
+# Never commit photos
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.heic
+*.HEIC
+*.png
+*.webp
+*.tif
+*.tiff
+!docs/**/*.png
+
+# Notebook outputs and scratch
+.ipynb_checkpoints/
+exif_survey.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
